@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    /* overflow: hidden; */
+}
+
+input, textarea {
+    display: block;
+    margin: 10px 0;
+}
+
+#formFormat{
+    width: 20%;
+    background-color: rgb(61, 61, 61);
+    padding: 20px;
+    overflow: scroll;
+    height: 100%;
+}
+
+#modificPV{
+    width: 80%;
+    background-color: rgb(61, 61, 61);
+    padding: 20px ;
+    height: 100%;
+}
+
+.preview {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.preview::content{
+    position: absolute;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
