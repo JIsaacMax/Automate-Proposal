@@ -5,60 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/general.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+
     <title>Proposal Maker</title>
 </head>
 <body>
   <nav id="formFormat">
     <form id="proposalForm">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" />
-      <label for="date">Data:</label>
-      <input type="date" id="date" />
+      <label for="name">Título:</label>
+      <input type="text" id="name" maxlength="24"/>
       <label for="company">Empresa:</label>
       <input type="text" id="company" />
-      <label for="logo">Logo URL:</label>
-      <input type="text" id="logo" />
-      <label for="values">Valores:</label>
-      <input type="text" id="values" />
-      <label for="services">Serviços:</label>
-      <textarea id="services" rows="5"></textarea>
+      <label for="date">Data:</label>
+      <input type="date" id="date" />
       <label for="scope">Escopo:</label>
-      <textarea id="scope" rows="5"></textarea>
-      <label for="testimonials">Depoimentos:</label>
-      <textarea id="testimonials" rows="5"></textarea>
-    </form>
-
-    <form id="modificPV">
-      <h3>Editar Estilos</h3>
-    <label for="element">Elemento:</label>
-    <select id="element">
-      <option value="preview">Preview</option>
-      <option value="header">Cabeçalho</option>
-      <option value="logo">Logo</option>
-    </select>
-
-    <label for="width">Largura:</label>
-    <input type="number" id="width" />
-
-    <label for="height">Altura:</label>
-    <input type="number" id="height" />
-
-    <label for="fontSize">Tamanho da Fonte:</label>
-    <input type="number" id="fontSize" />
-
-    <label for="textColor">Cor do Texto:</label>
-    <input type="color" id="textColor" />
-
-    <label for="bgColor">Cor de Fundo:</label>
-    <input type="color" id="bgColor" />
-
-    <button type="button" id="applyStyles">Aplicar Estilos</button>
+      <input type="text" id="scope"></input>
+      <label for="scope-details">Detalhes de Escopo:</label>
+      <textarea id="scope-details" rows="5"></textarea>
+      <button onclick="addMoreScope()" id="addValue">Adicionar +</button>
+      <label for="values-scope">Scopo de valor:</label>
+      <input type="text" id="values-name" />
+      <label for="values">Valores:</label>
+      <input type="number" id="values" />
+      <button onclick="addMoreValue()" id="addValue">Adicionar +</button>
+      <button type="submit" onclick="generatePDF()">Gerar Proposta</button>
     </form>
   </nav>
   
-  <div id="preview" class="preview"></div>
+  <div id="preview" class="preview">
+    <img src="/src/img/Preview1IMG.jpg" alt="" crossorigin="anonymous">
+    <img src="/src/img/Preview2IMG.jpg" alt="" crossorigin="anonymous">
+    <img src="/src/img/Preview3IMG.jpg" alt="" crossorigin="anonymous">
+    <img src="/src/img/Preview4IMG.jpg" alt="" crossorigin="anonymous">
+    <img src="/src/img/Preview5IMG.jpg" alt="" crossorigin="anonymous">
 
-  <script src="src/scripts/main.js"></script>
-  <script src="src/scripts/modifyPV.js"></script>
+    <!--Preview Texts-->
+    <h1 class="p-mainText" id="proposal-type">Estratégia de Marketing</h1>
+    <h1 class="p-mainText" id="client-name">Residencial Monte Verde</h1>
+    <h1 class="p-mainText" id="proposal-date">24 · 03 · 2023</h1>
+    <div id="emmetScope" class="container">
+      <h1 class="p-mainText scope-title" id="proposal-scope">Estratégia de Marketing</h1>
+      <img class="scope-check" src="/src/img/check.png" alt="">
+      <p class="p-longText scope-descript" id="scope-descript">Criação da pagina, nome, biografia, destaques e seguidores locais
+        Storyes ilimitados de acordo com o material enviado
+        8 Postagens Mensais, incluindo reels
+        Storyes ilimitados de acordo com o material enviado</p>
+    </div>
+    <div id="emmetValues" class="container">
+      <h1 class="p-mainText Cvalues-title" id="values-title" class="">Criação e Gestão da Rede Social por 6 meses</h1>
+      <p class="p-longText Cvalues-details" id="value-details" >R$3.900,00 </p>
+    </div>
+  </div>
+
+  <script src="/src/scripts/main.js"></script>
+  <script src="/src/scripts/modifyPV.js"></script>
+  <script src="/src/scripts/formatPV.js"></script>
+  <script src="/src/scripts/PVtoPDF.js"></script>
 </body>
 </html>
