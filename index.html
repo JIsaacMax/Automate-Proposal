@@ -8,6 +8,7 @@
     <title>Proposal Maker</title>
 </head>
 <body>
+<<<<<<< HEAD
   <nav id="CNT_formFormat">
     <form id="CNT_proposalForm">
       <label>Título:</label>
@@ -72,5 +73,59 @@
   <script src="/src/scripts/updatePreview.js"></script>
   <script src="/src/scripts/previewToPages.js"></script>
   <script src="/src/scripts/pagesToPDF.js"></script>
+=======
+  <nav id="formFormat">
+    <form id="proposalForm">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" />
+      <label for="date">Data:</label>
+      <input type="date" id="date" />
+      <label for="company">Empresa:</label>
+      <input type="text" id="company" />
+      <label for="logo">Logo URL:</label>
+      <input type="text" id="logo" />
+      <label for="values">Valores:</label>
+      <input type="text" id="values" />
+      <label for="services">Serviços:</label>
+      <textarea id="services" rows="5"></textarea>
+      <label for="scope">Escopo:</label>
+      <textarea id="scope" rows="5"></textarea>
+      <label for="testimonials">Depoimentos:</label>
+      <textarea id="testimonials" rows="5"></textarea>
+    </form>
+
+    <form id="modificPV">
+      <h3>Editar Estilos</h3>
+    <label for="element">Elemento:</label>
+    <select id="element">
+      <option value="preview">Preview</option>
+      <option value="header">Cabeçalho</option>
+      <option value="logo">Logo</option>
+    </select>
+
+    <label for="width">Largura:</label>
+    <input type="number" id="width" />
+
+    <label for="height">Altura:</label>
+    <input type="number" id="height" />
+
+    <label for="fontSize">Tamanho da Fonte:</label>
+    <input type="number" id="fontSize" />
+
+    <label for="textColor">Cor do Texto:</label>
+    <input type="color" id="textColor" />
+
+    <label for="bgColor">Cor de Fundo:</label>
+    <input type="color" id="bgColor" />
+
+    <button type="button" id="applyStyles">Aplicar Estilos</button>
+    </form>
+  </nav>
+  
+  <div id="preview" class="preview"></div>
+
+  <script src="src/scripts/main.js"></script>
+  <script src="src/scripts/modifyPV.js"></script>
+>>>>>>> parent of c316f43 (Update)
 </body>
 </html>

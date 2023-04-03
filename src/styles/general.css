@@ -1,47 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/********General********/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --Default: #F2F2F2;
-    --MinimalCalc: 445px;
-}
-
 body {
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: Arial, sans-serif;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100vw;
+    /* overflow: hidden; */
 }
-
-/********Navegation********/
 
 input, textarea {
     display: block;
     margin: 10px 0;
 }
 
+<<<<<<< HEAD
 
 #CNT_formFormat{
     position: sticky;
     top: 0;
     width: 16%;
+=======
+#formFormat{
+    width: 20%;
+>>>>>>> parent of c316f43 (Update)
     background-color: rgb(61, 61, 61);
-    padding: 30px;
+    padding: 20px;
+    overflow: scroll;
     height: 100%;
 }
 
 #modificPV{
     width: 80%;
     background-color: rgb(61, 61, 61);
+    padding: 20px ;
     height: 100%;
+}
+
+.preview {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.preview::content{
+    position: absolute;
 }
 
 .header {
@@ -53,6 +61,7 @@ input, textarea {
     width: 100px;
     height: auto;
     object-fit: contain;
+<<<<<<< HEAD
 }
 
 button{
@@ -231,4 +240,6 @@ img{
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+=======
+>>>>>>> parent of c316f43 (Update)
 }
