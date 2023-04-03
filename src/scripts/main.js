@@ -11,14 +11,6 @@ function formatCurrency(value) {
 }
 
 function updatePreview() {
-  const name = document.getElementById("name").value;
-  const company = document.getElementById("company").value;
-  const date = document.getElementById("date").value;
-  const scope = document.getElementById("scope").value;
-  const scopeD = document.getElementById("scope-details").value;
-  const valuesN = document.getElementById("values-name").value;
-  const values = document.getElementById("values").value;
-
   document.getElementById("proposal-type").textContent =
     name || "Estratégia de Marketing";
   document.getElementById("client-name").textContent =
@@ -26,23 +18,15 @@ function updatePreview() {
   document.getElementById("proposal-date").textContent = date
     ? formatDate(date)
     : "24 · 03 · 2023";
-  
-    let titlesScope = document.querySelectorAll("h1.scope-title");
+
     titlesScope[titlesScope.length-1].innerText = scope || "Estratégia de Marketing";
-
-
-    let scopeDetails = document.querySelectorAll(".scope-descript");
 
     scopeDetails[scopeDetails.length-1].innerText = scopeD || `Criação da pagina, nome, biografia, destaques e seguidores locais Storyes ilimitados de acordo com o material enviado 8 Postagens Mensais, incluindo reels Storyes ilimitados de acordo com o material enviado`;
 
 
-  
-    
-  let titlesValue =   document.querySelectorAll("h1.Cvalues-title");
-
   titlesValue[titlesValue.length-1].innerText =
     valuesN || "Criação e Gestão da Rede Social por 6 meses";
-  let valuesDetails = document.querySelectorAll(".Cvalues-details");
+
   valuesDetails[valuesDetails.length-1].innerText = values
     ? formatCurrency(values)
     : "R$3.900,00";
@@ -59,15 +43,7 @@ document
 document.getElementById("values-name").addEventListener("input", updatePreview);
 document.getElementById("values").addEventListener("input", updatePreview);
 
-// Previne o comportamento padrão do botão submit e chama a função generatePDF
-document.getElementById("proposalForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  generatePDF();
-});
-
-let topMargin = 44.5;
 function addMoreValue() {
-  //44.5 valor base do topMargin
   
   let newValuesTitle = document.createElement("h1");
   newValuesTitle.setAttribute("class", "Cvalues-title");
@@ -94,29 +70,25 @@ function addMoreScope(){
   let newScopeTitle = document.createElement("h1");
   newScopeTitle.setAttribute("class", "p-mainText scope-title");
   let newScopeDetails = document.createElement("p");
-  newScopeDetails.setAttribute("class", "p-longText scope-descript");
+  newScopeDetails.setAttribute("class", "p-longText scope-descript checkable");
 
+  topCheck = newScopeDetails. getBoundingClientRect().top;
 
-  let emmet = document.getElementById("emmetScope");
-  let imgCheck = document.createElement("img");
-
-  imgCheck.setAttribute("src", "/src/img/check.png");
-  imgCheck.setAttribute("class", "scope-check");
-
-  // emmet.appendChild(document.createElement("img", {
-  //   src: "/src/img/check.png",
-  //   class: "scope-check"
-  // }));
-  emmet.appendChild(imgCheck);
   emmet.appendChild(newScopeDetails);
-
-
+  
   newScopeTitle.innerText = "Funcionou";
   newScopeDetails.innerText = "Funcionou";
-
+  
+  currentCheck.style.top = `${topCheck}px`;
   newScopeTitle.style.top = `${topMarginS}px`;
   newScopeDetails.style.top = `${topMarginS}px`;
 
+}
 
-  // topMarginS += 3.75;
+function tradeValues(tag){
+  if(tag.value == "Clean"){
+  imageTrade.src = "/src/img/Preview6IMG.jpg";
+  }else{
+    imageTrade.src = "/src/img/Preview4IMG.jpg";
+  }
 }

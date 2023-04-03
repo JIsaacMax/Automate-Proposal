@@ -29,7 +29,7 @@ input, textarea {
 }
 
 
-#formFormat{
+#CNT_formFormat{
     position: sticky;
     top: 0;
     width: 16%;
@@ -61,7 +61,7 @@ button{
 
 /********Preview Style********/
 
-.preview {
+.CNT_preview {
     width: 80%;
     border: 1px solid #ccc;
     padding: 20px;
@@ -81,7 +81,7 @@ button{
 
 
 
-.p-mainText, .p-longText{
+.P_mainText, .P_longText{
     position: absolute;
     top: 0;
     left: 155px;
@@ -120,13 +120,26 @@ img{
     font-size: 32px;
 }
 
-#scope-descript{
+#P_scope-details{
     position: relative;
     top:calc(var(--MinimalCalc) * 0.1);
     /* left: 50px; */
 }
 
-#emmetScope{
+.P_checkable::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url('/src/img/check.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    z-index: 99;
+}
+
+#CNT_emmetScope{
     position: absolute;
     top: calc(var(--MinimalCalc) * 4.06);
     display: flex;
@@ -191,7 +204,27 @@ img{
     font-size: 24px;
 }
 
-#emmetValues{
+#default-pay{
+    position: absolute;
+    top: calc(var(--MinimalCalc) * 0.73);
+    left: 40px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#deadline{
+    position: absolute;
+    font-size: 32px;
+    top:calc(var(--MinimalCalc) * 1.15);
+    left: 14px;
+    color: #31db90;
+}
+
+#work-days{
+    color: white;
+}
+
+#CNT_emmetValues{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
