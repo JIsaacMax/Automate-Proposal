@@ -12,6 +12,7 @@ const form = document.getElementById('proposalForm');
       const testimonials = document.getElementById('testimonials').value;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function updatePreview() {
   document.getElementById("proposal-type").textContent =
     name || "Estratégia de Marketing";
@@ -95,6 +96,8 @@ function tradeValues(tag){
   }
 }
 =======
+=======
+>>>>>>> parent of c316f43 (Update)
       preview.innerHTML = `
         <div class="header">
           <h2>${company}</h2>
@@ -110,5 +113,9 @@ function tradeValues(tag){
         <h3>Depoimentos:</h3>
         <p>${testimonials}</p>
       `;
+<<<<<<< HEAD
+    });
+>>>>>>> parent of c316f43 (Update)
+=======
     });
 >>>>>>> parent of c316f43 (Update)

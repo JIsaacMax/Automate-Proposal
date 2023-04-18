@@ -19,11 +19,16 @@ input, textarea {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #CNT_formFormat{
     position: sticky;
     top: 0;
     width: 16%;
+=======
+#formFormat{
+    width: 20%;
+>>>>>>> parent of c316f43 (Update)
 =======
 #formFormat{
     width: 20%;
@@ -61,6 +66,7 @@ input, textarea {
     width: 100px;
     height: auto;
     object-fit: contain;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -240,6 +246,8 @@ img{
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+=======
+>>>>>>> parent of c316f43 (Update)
 =======
 >>>>>>> parent of c316f43 (Update)
 }
